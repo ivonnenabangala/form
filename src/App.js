@@ -65,19 +65,19 @@ function App() {
       <fieldset>
         <label>
           <p>First Name</p>
-          <input placeholder='First Name' name="firstname" onChange={handleChange} value={formData.firstname || ''}/>
+          <input placeholder='First Name' name="firstname" onChange={handleChange} value={formData.firstname || ''} required/>
         </label>
         <label>
           <p>Last Name</p>
-          <input placeholder='Last Name' name="lastname" onChange={handleChange} value={formData.lastname || ''}/>
+          <input placeholder='Last Name' name="lastname" onChange={handleChange} value={formData.lastname || ''} required/>
         </label>
         <label>
           <p>Email</p>
-          <input placeholder='example@gmail.com' name="email" onChange={handleChange} value={formData.email || ''}/>
+          <input type= "text" placeholder='example@gmail.com' name="email" onChange={handleChange} value={formData.email || ''} required/>
         </label>
         <label>
            <p>Gender</p>
-           <select name="gender" onChange={handleChange} value={formData.gender || ''}>
+           <select name="gender" onChange={handleChange} value={formData.gender || ''} required>
                <option value="">Please select your gender</option>
                <option value="male">Female</option>
                <option value="male">Male</option>
@@ -87,11 +87,11 @@ function App() {
          </label>
          <label>
           <p>Address</p>
-          <input placeholder="Postal address" name="address" onChange={handleChange} value={formData.address || ''}/>
+          <input placeholder="Postal address" name="address" onChange={handleChange} value={formData.address || ''} required/>
         </label>
         <label>
           <p>Bio</p>
-          <textarea placeholder="300 words" rows="4" cols="50" name="bio" onChange={handleChange} value={formData.bio || ''}/>
+          <textarea placeholder="300 words" rows="4" cols="50" name="bio" onChange={handleChange} value={formData.bio || ''} required/>
         </label>
       </fieldset>
       <button style={{width: "64px"}} type="submit">Submit</button>
